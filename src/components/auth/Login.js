@@ -3,7 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
-
+import { FaUserCircle } from "react-icons/fa";
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: '',
@@ -26,9 +26,15 @@ const Login = ({ login, isAuthenticated }) => {
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Sign In</h1>
+      <h2 style={{ color: "#28a745", marginLeft: "9.9%" }}>Login</h2>
       <p className="lead">
-        <i className="fas fa-user" /> Sign Into Your Account
+        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp;&nbsp; <FaUserCircle color="green" size="4.5rem" />
+        <br/>
+       {/*  <h4 style={{ fontSize: "15px" }}>
+          &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Sign Into Your
+          Account
+        </h4> */}
       </p>
       <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
@@ -51,7 +57,7 @@ const Login = ({ login, isAuthenticated }) => {
             minLength="6"
           />
         </div>
-        <input type="submit" className="btn btn-primary" value="Login" />
+        <input type="submit" className="btn btn-success" value="Login" style={{marginLeft:"11%"}}/>
       </form>
       <p className="my-1">
         Don't have an account? <Link to="/register">Sign Up</Link>

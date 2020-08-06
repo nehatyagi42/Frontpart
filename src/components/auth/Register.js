@@ -4,7 +4,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
-
+import { FaUserCircle } from "react-icons/fa";
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     name: '',
@@ -33,10 +33,16 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Sign Up</h1>
+      <h2 style={{ color: "#28a745", marginLeft: "9.9%" }}>Register</h2>
       <p className="lead">
-        <i className="fas fa-user" /> Create Your Account
+        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp;&nbsp; <FaUserCircle color="green" size="4.5rem" />
+        <br />
       </p>
+      <h4 style={{ fontSize: "15px" }}>
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; Sign Into
+        Your Account
+      </h4>
       <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
           <input
@@ -55,9 +61,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             value={email}
             onChange={onChange}
           />
-          <small className="form-text">
-            
-          </small>
+          <small className="form-text"></small>
         </div>
         <div className="form-group">
           <input
@@ -77,7 +81,12 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             onChange={onChange}
           />
         </div>
-        <input type="submit" className="btn btn-primary" value="Register" />
+        <input
+          type="submit"
+          className="btn btn-success"
+          value="Register"
+          style={{ marginLeft: "11%" }}
+         />
       </form>
       <p className="my-1">
         Already have an account? <Link to="/login">Sign In</Link>

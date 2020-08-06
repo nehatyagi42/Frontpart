@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 import './styles/style.css';
 import './styles/layout.css';
-
+import './styles/login.css';
 ReactDOM.render(
   <Provider store={store}>
     <Router>

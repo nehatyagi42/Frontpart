@@ -59,8 +59,8 @@ const DynamicForm = ({ title, url, model, firstRow, secondRow, thirdRow }) => {
                     {renderControls()}
                 </div>
                 <div className="container">
-                    <button onClick={(e) => handleSubmit(e)} className="btn btn-primary" style={{ marginRight: 20 }}>Submit</button>
-                    <button onClick={handleReset} className="btn btn-primary">Reset</button>
+                    <button onClick={(e) => handleSubmit(e)} className="btn btn-success" style={{ marginRight: 20 }}>Submit</button>
+                    <button onClick={handleReset} className="btn btn-dark">Reset</button>
                 </div>
             </form>
         </div>
